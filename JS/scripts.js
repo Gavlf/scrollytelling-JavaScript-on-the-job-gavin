@@ -13,22 +13,22 @@ gsap.timeline({
 })
 .to("#crowd-image", {
 	y: -165,
-	ease: "none"
+	ease: "power1.out"
 })
 .to("#ticket-image", {
 	y: 200,
-	ease: "none"
+	ease: "power2.out"
 }, 0)
 .to("#background-image", {
 	y: -50,
-	ease: "none"
+	ease: "slow(0.7, 0.7, false)"
 }, 0);
 
 gsap.fromTo("#ticket-image", {
 	y: 200
 }, {
 	y: 900,
-	ease: "none",
+	ease: "power1.out",
 	immediateRender: false,
 	scrollTrigger: {
 		trigger: ".gradient-divider",
@@ -37,6 +37,7 @@ gsap.fromTo("#ticket-image", {
 		scrub: true
 	}
 });
+
 
 // 3D hover effect on ticket image
 const ticketImage = document.getElementById('ticket-image');
@@ -63,10 +64,6 @@ openingPage.addEventListener('mousemove', (e) => {
     const rotateY = (x - 0.5) * -15;
     
     ticketImage.style.transform = `translate(-50%, -50%) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    ticketImage.classList.add('sparkling');
-  } else {
-    ticketImage.style.transform = 'translate(-50%, -50%) rotateX(0deg) rotateY(0deg)';
-    ticketImage.classList.remove('sparkling');
   }
 });
 
@@ -81,3 +78,32 @@ window.addEventListener('scroll', () => {
   ticketImage.style.transform = '';
 }, { once: true });
 
+
+// Fade out audience gradient & text on scroll
+gsap.timeline({
+scrollTrigger: {
+		trigger: ".audience-page",
+		start: "top top",
+		end: "+=300%",
+		pin: true,
+		scrub: true
+	}
+})
+.to(".audience-page", {
+	"--audience-overlay-opacity": 1,
+	ease: "none"
+}, 0)
+.to(".audience-page .text-content", {
+	opacity: 1,
+	ease: "none"
+}, 0)
+.to(".audience-page", {
+	"--audience-overlay-opacity": 0,
+	ease: "none",
+	immediateRender: false
+}, 0.8)
+.to(".audience-page .text-content", {
+	opacity: 0,
+	ease: "none",
+	immediateRender: false
+}, 0.8);

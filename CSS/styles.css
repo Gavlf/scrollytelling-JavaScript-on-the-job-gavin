@@ -76,6 +76,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  --audience-overlay-opacity: 1;
 }
 
 .audience-page::after {
@@ -83,6 +84,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: 1;
+  opacity: var(--audience-overlay-opacity);
   background: linear-gradient(
     180deg,
     var(--BrandPrimary__Brandprimary) 0%,
@@ -118,7 +120,7 @@ body {
 
 .page-subheader {
   position: absolute;
-  top: 22%;
+  top: 23%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: var(--Heading__FontFamily__Headingfontfamily);
@@ -133,11 +135,12 @@ body {
 
 .page-body {
   position: absolute;
-  top: 37%;
+  top: 38%;
   left: 50%;
   width: 700px;
   transform: translate(-50%, -50%);
   font-family: var(--Body__FontFamily__Bodyfontfamily);
+  line-height: 1.5;
   font-size: var(--Body__TextSize__TextsizeL);
   font-weight: var(--Body__FontWeight__Fontweightdefault);
   color: var(--Text__Bodyprimary);
@@ -157,10 +160,10 @@ body {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(
+   background: linear-gradient(
     180deg,
     var(--BrandPrimary__Brandprimary) 0%,
-    color-mix(in srgb, var(--BrandPrimary__Brandprimary) 46%, transparent) 47.12%,
+    color-mix(in srgb, var(--BrandPrimary__Brandprimary) 46%, transparent) 80%,
     transparent 100%
   );
 }
