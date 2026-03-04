@@ -14,6 +14,19 @@ body {
   overflow: hidden;
 }
 
+.opening-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    transparent 55%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
+
 #crowd-image, #background-image {
   position: absolute;
   inset: 0;
@@ -21,6 +34,7 @@ body {
     height: 100vh;
     object-fit: cover;
     display: block;
+    overflow: visible;
 }
 
 #background-image {
@@ -41,6 +55,17 @@ body {
   z-index: 2;
 }
 
+/* gradient divier styles */
+.gradient-divider {
+  position: relative;
+  width: 100vw;
+  height: 100px;
+  background: linear-gradient(
+    180deg,
+    #030713 30%,
+    var(--BrandPrimary__Brandprimary) 100%
+  );
+}
 
 /* styles for the audience page */
 .audience-page {
@@ -58,7 +83,7 @@ body {
   background: linear-gradient(
     180deg,
     var(--BrandPrimary__Brandprimary) 0%,
-    color-mix(in srgb, var(--BrandPrimary__Brandprimary) 46%, transparent) 47.12%,
+    color-mix(in srgb, var(--BrandPrimary__Brandprimary) 46%, transparent) 80%,
     transparent 100%
   );
 }
@@ -83,8 +108,8 @@ body {
   font-weight: var(--Heading__FontWeight__Fontweightbold);
   color: var(--Text__Headingprimary);
   text-shadow:
-    0 0 5px color-mix(in srgb, var(--BrandPrimary__Brandsecondary) 45%, white),
-    0 0 12px color-mix(in srgb, var(--BrandPrimary__Brandsecondary) 70%, transparent);
+    0 0 4px color-mix(in srgb, var(--BrandPrimary__Brandsecondary) 45%, gold),
+    0 0 11px color-mix(in srgb, var(--BrandPrimary__Brandsecondary) 70%, transparent);
   z-index: 2;
 }
 
