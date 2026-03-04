@@ -1,6 +1,7 @@
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
+// Parallax scrolling effect for opening page
 gsap.timeline({
 	scrollTrigger: {
 		trigger: ".opening-page",
