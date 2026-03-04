@@ -1,0 +1,45 @@
+:root {
+  --Blues__Blue90: #0f172a;
+  --Neutrals__Neutral10: #f8f5f0;
+  --Neutrals__Neutral30: #e5e1da;
+  --Yellows__Gold70: #d4af37;
+  --Browns__Brown80: #3f2e23;
+  --Neutrals__Gray50: #94a3b8;
+
+  --Blues__Blue-90: var(--Blues__Blue90);
+  --Neutrals__Neutral-10: var(--Neutrals__Neutral10);
+  --Neutrals__Neutral-30: var(--Neutrals__Neutral30);
+  --Yellows__Gold-70: var(--Yellows__Gold70);
+  --Browns__Brown-80: var(--Browns__Brown80);
+  --Neutrals__Gray-50: var(--Neutrals__Gray50);
+
+  --Accent__Accentprimary: var(--Browns__Brown80);
+  --Accent__Accentsecondary: var(--Neutrals__Gray50);
+  --BrandPrimary__Brandprimary: var(--Blues__Blue90);
+  --BrandPrimary__Brandsecondary: var(--Yellows__Gold70);
+  --Surfaceprimary: var(--Neutrals__Neutral30);
+  --Surfacesecondary: var(--Neutrals__Neutral10);
+  --Text__Headingprimary: var(--Yellows__Gold70);
+  --Text__Bodyprimary: var(--Neutrals__Neutral10);
+  --Text__Headingsecondary: var(--Neutrals__Neutral10);
+  --Text__Bodysecondary: var(--Browns__Brown80);
+
+  --BackgroundColors__Light: var(--Neutrals__Neutral10);
+
+  --Heading__FontFamily__Headingfontfamily: "Cormorant Garamond", serif;
+  --Body__FontFamily__Bodyfontfamily: "Montserrat", sans-serif;
+  --Heading__TextSize__FontsizeXL: 96px;
+  --Heading__TextSize__FontsizeL: 60px;
+  --Heading__TextSize__FontsizeM: 48px;
+  --Heading__TextSize__FontsizeS: 34px;
+  --Heading__TextSize__FontsizeXS: 24px;
+  --Heading__FontWeight__Fontweightbold: 700;
+  --Heading__FontWeight__Fontweightdefault: 400;
+  --Heading__FontWeight__Fontweightmedium: 500;
+  --Heading__FontWeight__Fontweightlight: 300;
+  --Body__TextSize__TextsizeL: 16px;
+  --Body__TextSize__TextsizeS: 14px;
+  --Body__FontWeight__Fontweightdefault: 400;
+  --Body__FontWeight__Fontweightlight: 300;
+  --Body__FontWeight__Fontweightmedium: 500;
+}

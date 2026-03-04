@@ -1,0 +1,169 @@
+/* css reset */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--BackgroundColors__Light);
+  }
+
+  
+/* styles for the opening page */
+.opening-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#crowd-image, #background-image {
+  position: absolute;
+  inset: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+}
+
+#background-image {
+  z-index: 1;
+}
+
+#crowd-image {
+  z-index: 3;
+}
+
+#ticket-image {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1800px;
+  height: auto;
+  z-index: 2;
+}
+
+
+/* styles for the audience page */
+.audience-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.audience-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    var(--BrandPrimary__Brandprimary) 0%,
+    color-mix(in srgb, var(--BrandPrimary__Brandprimary) 46%, transparent) 47.12%,
+    transparent 100%
+  );
+}
+
+#audience-image {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+  z-index: 0;
+}
+
+.page-header {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--Heading__FontFamily__Headingfontfamily);
+  font-size: var(--Heading__TextSize__FontsizeXL);
+  font-weight: var(--Heading__FontWeight__Fontweightbold);
+  color: var(--Text__Headingprimary);
+  text-shadow:
+    0 0 5px color-mix(in srgb, var(--BrandPrimary__Brandsecondary) 45%, white),
+    0 0 12px color-mix(in srgb, var(--BrandPrimary__Brandsecondary) 70%, transparent);
+  z-index: 2;
+}
+
+.page-subheader {
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--Heading__FontFamily__Headingfontfamily);
+  font-size: var(--Heading__TextSize__FontsizeL);
+  font-weight: var(--Heading__FontWeight__Fontweightmedium);
+  color: var(--Text__Headingsecondary);
+  text-shadow:
+    0 0 5px color-mix(in srgb, var(--Text__Headingsecondary) 45%, white),
+    0 0 12px color-mix(in srgb, var(--Text__Headingsecondary) 70%, transparent);
+  z-index: 2;
+}
+
+.page-body {
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  width: 700px;
+  transform: translate(-50%, -50%);
+  font-family: var(--Body__FontFamily__Bodyfontfamily);
+  font-size: var(--Body__TextSize__TextsizeL);
+  font-weight: var(--Body__FontWeight__Fontweightdefault);
+  color: var(--Text__Bodyprimary);
+  z-index: 2;
+}
+
+/* styles for the stage page */
+.stage-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.stage-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    var(--BrandPrimary__Brandprimary) 0%,
+    color-mix(in srgb, var(--BrandPrimary__Brandprimary) 46%, transparent) 47.12%,
+    transparent 100%
+  );
+}
+
+#conductor-image {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+  z-index: 0;
+}
+
+/* styles for the sheet music page */
+.sheet-music-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sheet-music-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    var(--BrandPrimary__Brandprimary) 0%,
+    color-mix(in srgb, var(--BrandPrimary__Brandprimary) 46%, transparent) 47.12%,
+    transparent 100%
+  );
+}
