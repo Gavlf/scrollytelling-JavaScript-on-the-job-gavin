@@ -2,199 +2,29 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--BackgroundColors__Light);
   }
 
-  
-/* styles for the opening page */
-.opening-page {
+#building-section {
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  perspective: 1000px;
+  width: 100%;
 }
 
-.opening-page::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 5;
-  background: radial-gradient(
-    ellipse at center,
-    transparent 0%,
-    transparent 55%,
-    rgba(0, 0, 0, 0.9) 100%
-  );
-}
-
-#crowd-image, #background-image {
-  position: absolute;
-  inset: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    display: block;
-    overflow: visible;
-}
-
-#background-image {
-  z-index: 1;
-}
-
-#crowd-image {
-  z-index: 3;
-}
-
-#ticket-image {
-  position: absolute;
-  top: 43%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1800px;
+#building-surface,
+#building-details {
+  display: block;
+  width: 100%;
   height: auto;
-  z-index: 2;
-  transition: transform 0.1s ease-out;
-  transform-style: preserve-3d;
 }
 
-/* gradient divider styles */
-.gradient-divider {
+#building-surface {
   position: relative;
-  width: 100vw;
-  height: 500px;
-  background: linear-gradient(
-    180deg,
-    #02020a 50%,
-    var(--BrandPrimary__Brandprimary) 100%
-  );
-}
-
-/* styles for the audience page */
-.audience-page {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  --audience-overlay-opacity: 1;
-}
-
-.audience-page::after {
-  content: "";
-  position: absolute;
-  inset: 0;
   z-index: 1;
-  opacity: var(--audience-overlay-opacity);
-  background: linear-gradient(
-    180deg,
-    var(--BrandPrimary__Brandprimary) 0%,
-    color-mix(in srgb, var(--BrandPrimary__Brandprimary) 46%, transparent) 80%,
-    transparent 100%
-  );
 }
 
-#audience-image {
+#building-details {
   position: absolute;
   inset: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  display: block;
-  z-index: 0;
-}
-
-.page-header {
-  position: absolute;
-  top: 8%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--Heading__FontFamily__Headingfontfamily);
-  font-size: var(--Heading__TextSize__FontsizeXL);
-  font-weight: var(--Heading__FontWeight__Fontweightbold);
-  color: var(--Text__Headingprimary);
-  text-shadow:
-    0 0 4px color-mix(in srgb, var(--BrandPrimary__Brandsecondary) 45%, gold),
-    0 0 11px color-mix(in srgb, var(--BrandPrimary__Brandsecondary) 70%, transparent);
   z-index: 2;
+  pointer-events: none;
 }
 
-.page-subheader {
-  position: absolute;
-  top: 23%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--Heading__FontFamily__Headingfontfamily);
-  font-size: var(--Heading__TextSize__FontsizeL);
-  font-weight: var(--Heading__FontWeight__Fontweightmedium);
-  color: var(--Text__Headingsecondary);
-  text-shadow:
-    0 0 5px color-mix(in srgb, var(--Text__Headingsecondary) 45%, white),
-    0 0 12px color-mix(in srgb, var(--Text__Headingsecondary) 70%, transparent);
-  z-index: 2;
-}
-
-.page-body {
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  width: 700px;
-  transform: translate(-50%, -50%);
-  font-family: var(--Body__FontFamily__Bodyfontfamily);
-  line-height: 1.5;
-  font-size: var(--Body__TextSize__TextsizeL);
-  font-weight: var(--Body__FontWeight__Fontweightdefault);
-  color: var(--Text__Bodyprimary);
-  z-index: 2;
-}
-
-/* styles for the stage page */
-.stage-page {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.stage-page::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-   background: linear-gradient(
-    180deg,
-    var(--BrandPrimary__Brandprimary) 0%,
-    color-mix(in srgb, var(--BrandPrimary__Brandprimary) 46%, transparent) 80%,
-    transparent 100%
-  );
-}
-
-#conductor-image {
-  position: absolute;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  display: block;
-  z-index: 0;
-}
-
-/* styles for the sheet music page */
-.sheet-music-page {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.sheet-music-page::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(
-    180deg,
-    var(--BrandPrimary__Brandprimary) 0%,
-    color-mix(in srgb, var(--BrandPrimary__Brandprimary) 46%, transparent) 47.12%,
-    transparent 100%
-  );
-}
