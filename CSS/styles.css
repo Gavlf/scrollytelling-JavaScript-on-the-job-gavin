@@ -8,3 +8,7 @@ body {
 #building-surface{
   fill:#eff0f5;
 }
+
+#window-cutout{
+  fill:none;
+}
