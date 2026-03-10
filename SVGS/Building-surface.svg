@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_9" data-name="Layer 9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 7087.85">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #eff0f5;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="428.97" y="4377.78" width="480.14" height="632.48"/>
+  <rect class="cls-1" x="428.97" y="3466.01" width="480.14" height="632.48"/>
+  <rect class="cls-1" x="1020.89" y="3466.01" width="480.14" height="632.48"/>
+  <rect class="cls-1" x="428.97" y="5292.44" width="480.14" height="632.48"/>
+  <rect class="cls-1" x="1020.89" y="5292.44" width="480.14" height="632.48"/>
+  <rect class="cls-1" x="428.97" y="1640.78" width="480.14" height="632.48"/>
+  <rect class="cls-1" x="428.97" y="786.31" width="480.14" height="632.48"/>
+  <rect class="cls-1" x="1010.89" y="2553.25" width="480.14" height="632.48"/>
+  <rect class="cls-1" x="1020.89" y="1640.78" width="480.14" height="632.48"/>
+  <path class="cls-2" d="M324.52,558.3v6529.55h1270.96V558.3H324.52ZM1501.03,5292.44v632.48h-480.14v-632.48h480.14ZM909.11,5292.44v632.48h-480.14v-632.48h480.14ZM909.11,4377.78v632.48h-480.14v-632.48h480.14ZM1501.03,3466.01v632.48h-480.14v-632.48h480.14ZM909.11,3466.01v632.48h-480.14v-632.48h480.14ZM1491.03,2553.25v632.48h-480.14v-632.48h480.14ZM1020.89,1640.78h480.14v632.48h-480.14v-632.48ZM428.97,786.31h480.14v632.48h-480.14v-632.48ZM428.97,1640.78h480.14v632.48h-480.14v-632.48Z"/>
+</svg>

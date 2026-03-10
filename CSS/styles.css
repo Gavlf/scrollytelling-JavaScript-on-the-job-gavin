@@ -4,27 +4,7 @@ body {
     padding: 0;
   }
 
-#building-section {
-  position: relative;
-  width: 100%;
+/* Building SVG Styles */
+#building-surface{
+  fill:#eff0f5;
 }
-
-#building-surface,
-#building-details {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-#building-surface {
-  position: relative;
-  z-index: 1;
-}
-
-#building-details {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-}
-
