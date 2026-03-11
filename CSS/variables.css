@@ -38,17 +38,17 @@
 
   --Headingfontfamily: "Plus Jakarta Sans";
   --Bodyfontfamily: "Host Grotesk";
-  --Heading__FontsizeXL: 96;
-  --Heading__FontsizeL: 60;
-  --Heading__FontsizeM: 48;
-  --Heading__FontsizeS: 34;
-  --Heading__FontsizeXS: 24;
+  --Heading__FontsizeXL: 65px;
+  --Heading__FontsizeL: 60px;
+  --Heading__FontsizeM: 48px;
+  --Heading__FontsizeS: 34px;
+  --Heading__FontsizeXS: 24px;
   --Heading__Fontweightbold: Bold;
   --Heading__Fontweightdefault: Regular;
   --Heading__Fontweightmedium: Medium;
   --Heading__Fontweightlight: Light;
-  --Body__TextsizeL: 16;
-  --Body__TextsizeS: 14;
+  --Body__TextsizeL: 16px;
+  --Body__TextsizeS: 14px;
   --Body__FontWeight__Fontweightdefault: Regular;
   --Body__Fontweightlight: Light;
   --Body__Fontweightmedium: Medium;

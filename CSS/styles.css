@@ -16,9 +16,46 @@ body {
   background: transparent;
 }
 
+/* Hero Section Styles */
+.word-gap {
+  display: inline-block;
+  width: 5rem;
+}
+
+#hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 2rem;
+  font-family: var(--Headingfontfamily);
+  font-size: var(--Heading__FontsizeXL);
+  color: var(--Headingcolorprimary);
+  z-index: auto;
+}
+
+#hero h1 {
+  line-height: 0.95;
+}
+
+#java-script {
+  margin-left: -46rem;
+  margin-top: 11rem;
+}
+
+#on-the-job {
+  position: relative;
+  margin-top: -2.5rem;
+  z-index: 3;
+  color: var(--Headingcoloraccent);
+}
+
+
 /* Building SVG Styles */
 #building {
   position: relative;
+  z-index: auto;
 }
 
 #building-surface,
