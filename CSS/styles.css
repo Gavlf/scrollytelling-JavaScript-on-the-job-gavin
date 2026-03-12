@@ -289,7 +289,9 @@ body {
 
 /* Breaktime SVG Section Styles */
 #stairs,
-#pingpong-ball{
+#pingpong-ball,
+#pingpong-table,
+#pingpong-player{
   position: absolute;
   top: 0;
   left: 0;
@@ -308,4 +310,55 @@ body {
 
 .pingpong-ball{
   fill: var(--Objectspecialaccent);
+}
+
+#pingpong-table-dark{
+  fill: var(--Objectsurfacesecondary);
+}
+
+#pingpong-table-light{
+  fill: var(--Objectaccentprimary);
+}
+
+#paddle-handle{
+    fill: var(--Objectaccentprimary);
+}
+
+#paddle{
+   fill: var(--Objectsurfacesecondary);
+}
+
+#player-hand-front,
+#player-hand-back,
+#player-leg-front,
+#player-leg-back,
+#player-head{
+  fill: var(--Skincolorprimary);
+}
+
+#player-hair,
+#player-eye{
+   fill: var(--Clothingaccentprimary);
+}
+
+#player-short-back{
+  fill: var(--Clothingaccentsecondarytertiary);
+}
+
+#player-short-front,
+#player-arm-front,
+#player-hood{
+  fill: var(--Clothingsurfacetertiary);
+}
+
+#player-undershirt{
+  fill: var(--Clothingaccenttertiary);
+}
+
+#player-arm-back{
+  fill: var(--Clothingaccentsecondarytertiary);
+}
+
+#player-sweater{
+  fill: var( --Clothingsurfacesecondary);
 }
