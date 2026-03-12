@@ -189,7 +189,8 @@ body {
 
 /* Employee SVG Section Styles */
 .employee-lamp, 
-#employee{
+#employee,
+#cubicle{
   position: absolute;
   top: 0;
   left: 0;
@@ -272,4 +273,16 @@ body {
 
 #employee-hair{
   fill: var(--Clothingaccentprimary);
+}
+
+#cubicle-frame{
+  fill: var(--Objectsurfacesecondary);
+}
+
+#cubicle-computer{
+  fill: var(--Objectaccentsecondary);
+}
+
+.cubicle-back{
+  fill: var(--Objectsurfaceprimary);
 }
