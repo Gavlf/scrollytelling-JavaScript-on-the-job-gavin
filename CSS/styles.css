@@ -385,7 +385,10 @@ body {
 /* Clockout SVG Section Styles */
 #clock-out,
 #lockers-1,
-#locker-clock{
+#locker-clock,
+#locker-lamp-2,
+#locker-lamp-1,
+#lower-lockers{
   position: absolute;
   top: 0;
   left: 0;
