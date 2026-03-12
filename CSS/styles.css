@@ -130,6 +130,20 @@ body {
   fill:var(--Objectsurfacetertiary);
 }
 
+.section-heading{
+  font-family: var(--Headingfontfamily);
+  font-size: var(--Heading__FontsizeL);
+  color: var(--Headingcolorprimary);
+}
+
+.section-text{
+  font-family: var(--Bodyfontfamily);
+  font-size: var(--Body__TextsizeL);
+  color: var(--Bodycolorprimary);
+  width: 35.5rem;
+  line-height: 1.4;
+}
+
 /* Boss SVG Section Styles */
 #the-boss {
   position: absolute;
@@ -147,6 +161,20 @@ body {
   left: 0;
   width: 100%;
   height: auto;
+}
+
+#the-boss-heading{
+  position: relative;
+  z-index: 3;
+  margin-left: 69rem;
+  margin-top: 52rem;
+}
+
+#the-boss-text{
+  position: relative;
+  z-index: 3;
+  margin-left: 60.5rem;
+  margin-top: -1rem;
 }
 
 #boss {
