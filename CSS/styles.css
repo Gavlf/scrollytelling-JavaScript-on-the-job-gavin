@@ -134,6 +134,7 @@ body {
   font-family: var(--Headingfontfamily);
   font-size: var(--Heading__FontsizeL);
   color: var(--Headingcolorprimary);
+  transform: translateY(calc(-1 * var(--page-top-padding)));
 }
 
 .section-text{
@@ -142,6 +143,7 @@ body {
   color: var(--Bodycolorprimary);
   width: 35.5rem;
   line-height: 1.4;
+  transform: translateY(calc(-1 * var(--page-top-padding)));
 }
 
 .code-snippet{
