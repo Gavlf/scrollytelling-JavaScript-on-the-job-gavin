@@ -41,6 +41,17 @@ if (mainScene) {
 	});
 }
 
+// Employeescene - second pin after the boss pin range
+if (mainScene) {
+	ScrollTrigger.create({
+		trigger: document.body,
+		start: "top -2684px",
+		end: "+=500",
+		pin: mainScene,
+		anticipatePin: 1,
+	});
+}
+
 
 
 // Boss section - fade in from top on scroll
@@ -113,6 +124,130 @@ if (boss && bossComputer) {
 			},
 		}
 	);
+}
+
+// Boss section - animate bubble + emoji together with a pop/fade that completes at pin end + change boss skin to flush color
+const bossBubble = document.querySelector("#boss-bubble");
+const bossEmoji = document.querySelector("#boss-emoji");
+const bossSkin = gsap.utils.toArray("#boss .skin");
+const rootStyles = getComputedStyle(document.documentElement);
+const skinBaseColor = rootStyles.getPropertyValue("--Skincolorprimary").trim();
+const skinAccentColor = rootStyles.getPropertyValue("--Skincoloraccent").trim();
+const skinFlushColor = skinBaseColor && skinAccentColor
+	? gsap.utils.interpolate(skinBaseColor, skinAccentColor, 0.35)
+	: skinAccentColor;
+
+if (bossBubble && bossEmoji) {
+	gsap.set([bossBubble, bossEmoji], {
+		autoAlpha: 0,
+		scale: 0.96,
+		transformOrigin: "50% 50%",
+	});
+
+	gsap.to([bossBubble, bossEmoji], {
+		autoAlpha: 1,
+		scale: 1,
+		ease: "power1.out",
+		scrollTrigger: {
+			trigger: document.body,
+			start: "top -1110px",
+			end: "top -1800px",
+			scrub: 1,
+		},
+	});
+
+	if (bossSkin.length && skinFlushColor) {
+		gsap.to(bossSkin, {
+			fill: skinFlushColor,
+			ease: "none",
+			scrollTrigger: {
+				trigger: document.body,
+				start: "top -1110px",
+				end: "top -1800px",
+				scrub: 1,
+			},
+		});
+	}
+}
+
+// Employee section - animate lamps dropping in from above over the employee intro range
+const employeeLamps = gsap.utils.toArray(".employee-lamp");
+
+if (employeeLamps.length) {
+	gsap.fromTo(
+		employeeLamps,
+		{ y: -140 },
+		{
+			y: 0,
+			ease: "power2.out",
+			scrollTrigger: {
+				trigger: document.body,
+				start: "top -2600px",
+				end: "top -2684px",
+				scrub: 1,
+			},
+		}
+	);
+}
+
+// Employee section - animate employee and cubicle rising in from below over the same range
+const employee = document.querySelector("#employee");
+const cubicle = document.querySelector("#cubicle");
+
+if (employee && cubicle) {
+	gsap.fromTo(
+		[employee, cubicle],
+		{ y: 300 },
+		{
+			y: 0,
+			ease: "power2.out",
+			scrollTrigger: {
+				trigger: document.body,
+				start: "top -2600px",
+				end: "top -2684px",
+				scrub: 1,
+			},
+		}
+	);
+}
+
+// Employee section - animate bubble + emoji together over the employee pin progression
+const employeeBubble = document.querySelector("#employee-bubble");
+const employeeEmoji = document.querySelector("#employee-emoji");
+
+if (employeeBubble && employeeEmoji) {
+	gsap.set([employeeBubble, employeeEmoji], {
+		autoAlpha: 0,
+		scale: 0.96,
+		transformOrigin: "50% 50%",
+	});
+
+	gsap.to([employeeBubble, employeeEmoji], {
+		autoAlpha: 1,
+		scale: 1,
+		ease: "power1.out",
+		scrollTrigger: {
+			trigger: document.body,
+			start: "top -2684px",
+			end: "top -2934px",
+			scrub: 1,
+		},
+	});
+}
+
+// Employee section - after bubble reveal, move employee left toward the cubicle within the same pin
+if (employee && cubicle) {
+	gsap.to(employee, {
+		x: () => -window.innerWidth * 0.32,
+		ease: "none",
+		scrollTrigger: {
+			trigger: document.body,
+			start: "top -2934px",
+			end: "top -3184px",
+			scrub: 1,
+			invalidateOnRefresh: true,
+		},
+	});
 }
 
 

@@ -130,6 +130,10 @@ body {
   fill:var(--Objectsurfacetertiary);
 }
 
+.bubble-fill{
+  fill: var(--Objectaccenttertiary);
+}
+
 .section-heading{
   font-family: var(--Headingfontfamily);
   font-size: var(--Heading__FontsizeL);
@@ -165,7 +169,9 @@ body {
 
 #boss,
 #boss-computer,
-#boss-lamp {
+#boss-lamp,
+#boss-bubble,
+#boss-emoji{
   position: absolute;
   top: 0;
   left: 0;
@@ -197,6 +203,28 @@ body {
 
 #boss {
   z-index: 2;
+}
+
+#boss-bubble{
+  z-index: 2;
+}
+
+#boss-emoji{
+  z-index: 2
+}
+
+.emoji-skin{
+  fill: var(--Skincoloraccent);
+}
+
+.emoji-blue-fill{
+  fill: var(--Clothingaccentprimary);
+}
+
+.emoji-blue-stroke{
+  stroke: var(--Clothingaccentprimary);
+  stroke-miterlimit: 10;
+  fill: none;
 }
 
 #boss-computer{
@@ -258,11 +286,28 @@ body {
   left: 0;
   width: 100%;
   height: auto;
+  z-index: 1;
+}
+
+#employee-bubble,
+#employee-emoji {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+#cubicle {
+  z-index: 1;
+}
+
+#employee {
   z-index: 2;
 }
 
 #chair-pole{
-  fill: var(--Objectsurfaceprimary);
+  fill: var(--Objectspecialaccent2);
 }
 
 #chair-mount{
@@ -274,7 +319,7 @@ body {
 }
 
 #chair-connector{
-  fill: var(--Objectsurfaceprimary);
+  fill: var(--Objectspecialaccent2);
 }
 
 #sock{

@@ -12,6 +12,7 @@
   --Blues__Blue5: #d9e4ea;
   --Blues__Blue40: #5e7c98;
   --Neutrals__Tan75: #d4b5a3;
+  --Reds__Red80: #fd2525;
 
   --Buildingsurfaceprimary: var(--Neutrals__White70);
   --Buildingsurfacesecondary: var(--Blues__Blue30);
@@ -38,6 +39,7 @@
   --Bodycoloraccent: var(--Blues__Blue45);
   --Headingcoloraccent: var(--Blues__Blue55);
   --Skincolorprimary: var(--Neutrals__Tan75);
+  --Skincoloraccent: var(--Reds__Red80);
 
   --Headingfontfamily: "Plus Jakarta Sans";
   --Bodyfontfamily: "Host Grotesk";
