@@ -16,6 +16,18 @@ body {
   background: transparent;
 }
 
+main {
+  padding-bottom: 0;
+}
+
+body::after {
+  content: "";
+  display: block;
+  height: 320vh;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 /* Hero Section Styles */
 .word-gap {
   display: inline-block;
@@ -395,13 +407,37 @@ body {
 }
 
 /* Breaktime SVG Section Styles */
-#stairs,
-#pingpong-ball,
 #pingpong-table,
 #pingpong-player,
-#pingpong-ball-break,
 #break-lamp-l,
 #break-lamp-r{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+}
+
+#pingpong-ball {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+#pingpong-ball-break{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+#stairs {
   position: absolute;
   top: 0;
   left: 0;
