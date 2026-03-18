@@ -7,8 +7,8 @@ JavaScript On The Job is my first attempt at creating an interactive scrollytell
 <ul>
 <li>Light and Dark Mode</li>
 <li>Smoothscrolling Interface</li>
-<li>>Progress Tracker</li>
-<li>Engaging Animations</li>
+<li>Progress Tracker</li>
+<li>Interactive Scroll Animations</li>
 </ul>
 
 
