@@ -1,6 +1,24 @@
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
+// Smooth scrolling with Lenis, synchronized with ScrollTrigger updates.
+const lenis = window.Lenis
+	? new window.Lenis({
+		duration: 1.05,
+		smoothWheel: true,
+		syncTouch: true,
+		touchMultiplier: 1.1,
+	})
+	: null;
+
+if (lenis) {
+	lenis.on("scroll", ScrollTrigger.update);
+	gsap.ticker.add((time) => {
+		lenis.raf(time * 1000);
+	});
+	gsap.ticker.lagSmoothing(0);
+}
+
 
 // Hero section - fade in from top on scroll and pin the section in place while the hero elements animate in
 const heroHeadings = gsap.utils.toArray("#hero h1");
@@ -8,6 +26,16 @@ const mainScene = document.querySelector("main");
 let finalPinEndY = 0;
 let isFinalDownLockActive = false;
 let touchStartY = 0;
+const lockListenerOptions = { passive: false, capture: true };
+
+const clampToFinalPinEnd = () => {
+	if (lenis) {
+		lenis.scrollTo(finalPinEndY, { immediate: true, force: true });
+		return;
+	}
+
+	window.scrollTo(0, finalPinEndY);
+};
 
 const lockDownwardScrollAtFinal = (event) => {
 	if (!isFinalDownLockActive) return;
@@ -15,7 +43,7 @@ const lockDownwardScrollAtFinal = (event) => {
 	if (event.type === "wheel") {
 		if (event.deltaY > 0) {
 			event.preventDefault();
-			window.scrollTo(0, finalPinEndY);
+			clampToFinalPinEnd();
 		}
 		return;
 	}
@@ -30,7 +58,7 @@ const lockDownwardScrollAtFinal = (event) => {
 		const isDownwardPageScroll = currentY < touchStartY;
 		if (isDownwardPageScroll) {
 			event.preventDefault();
-			window.scrollTo(0, finalPinEndY);
+			clampToFinalPinEnd();
 		}
 		return;
 	}
@@ -44,7 +72,7 @@ const lockDownwardScrollAtFinal = (event) => {
 
 		if (blocksDownward) {
 			event.preventDefault();
-			window.scrollTo(0, finalPinEndY);
+			clampToFinalPinEnd();
 		}
 	}
 };
@@ -59,17 +87,18 @@ const setFinalDownLock = (shouldLock, endY) => {
 	isFinalDownLockActive = shouldLock;
 
 	if (isFinalDownLockActive) {
-		window.addEventListener("wheel", lockDownwardScrollAtFinal, { passive: false });
-		window.addEventListener("touchstart", lockDownwardScrollAtFinal, { passive: false });
-		window.addEventListener("touchmove", lockDownwardScrollAtFinal, { passive: false });
-		window.addEventListener("keydown", lockDownwardScrollAtFinal, { passive: false });
+		clampToFinalPinEnd();
+		window.addEventListener("wheel", lockDownwardScrollAtFinal, lockListenerOptions);
+		window.addEventListener("touchstart", lockDownwardScrollAtFinal, lockListenerOptions);
+		window.addEventListener("touchmove", lockDownwardScrollAtFinal, lockListenerOptions);
+		window.addEventListener("keydown", lockDownwardScrollAtFinal, lockListenerOptions);
 		return;
 	}
 
-	window.removeEventListener("wheel", lockDownwardScrollAtFinal);
-	window.removeEventListener("touchstart", lockDownwardScrollAtFinal);
-	window.removeEventListener("touchmove", lockDownwardScrollAtFinal);
-	window.removeEventListener("keydown", lockDownwardScrollAtFinal);
+	window.removeEventListener("wheel", lockDownwardScrollAtFinal, { capture: true });
+	window.removeEventListener("touchstart", lockDownwardScrollAtFinal, { capture: true });
+	window.removeEventListener("touchmove", lockDownwardScrollAtFinal, { capture: true });
+	window.removeEventListener("keydown", lockDownwardScrollAtFinal, { capture: true });
 };
 
 if (heroHeadings.length && mainScene) {
@@ -176,17 +205,17 @@ if (mainScene) {
 	ScrollTrigger.create({
 		trigger: document.body,
 		start: "top -10900px",
-		end: "+=100",
+		end: "+=500",
 		pin: mainScene,
 		pinSpacing: true,
 		invalidateOnRefresh: true,
 		anticipatePin: 1,
 		onUpdate: (self) => {
-			const atOrPastEnd = self.progress >= 1;
+			const atOrPastEnd = self.progress >= 1 && window.scrollY >= self.end - 2;
 			setFinalDownLock(atOrPastEnd, self.end);
 
 			if (atOrPastEnd && self.direction > 0) {
-				window.scrollTo(0, self.end);
+				clampToFinalPinEnd();
 			}
 		},
 		onLeaveBack: (self) => {
