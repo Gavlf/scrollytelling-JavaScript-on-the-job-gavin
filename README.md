@@ -16,7 +16,7 @@ Navigating the website is simple: scroll with your middle mouse button and enjoy
 <h2>Visit the Site</h2>
 <a href=https://gavlf.github.io/scrollytelling-JavaScript-on-the-job-gavin/>JavaScript on the Job</a>
 <p></p>
-<a href=https://github.com/Gavlf/scrollytelling-JavaScript-on-the-job-gavin/>View Build Repo</a>
+<a href=https://github.com/Gavlf/scrollytelling-JavaScript-on-the-job-gavin/>View Repository</a>
 
 <h1>Reflection</h1>
 
@@ -26,6 +26,7 @@ JavaScript on The Job uses the corporate life as a metaphor for basic JavaScript
 <h2>Self Reflection Questions</h2>
 <ul>
 <li>What is one section you are most proud of?</li>
+<p></p>
 <p>I am most proud of my "The Break" section. I wasn't sure how the idea of the ping-pong ball leading the users between frames would work at first. However, I was quite content with the way it came out in the end after animating it with GSAP.</p>
 <li></li>
 </ul>
